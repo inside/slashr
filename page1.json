@@ -1,0 +1,38 @@
+{
+    "page": 1,
+    "per_page": 5,
+    "has_more": true,
+    "total": 17,
+    "data": [
+        {
+            "id": 1,
+            "title": "Brexit: Government Rejects Petition Signed By 4.1 Million Calling For Second EU Referendum",
+            "description": "The Government has rejected a call for a second referendum on European Union membership in a petition that was signed by more than 4.1 million people following the Brexit vote. It was the most-signed Government petition since the process was introduced in 2011. However in an official reply, the Foreign Office said 33 million people had had their say and \"the decision must be respected. [...] We must now prepare for the process to exit the EU,\" it said. The petition, which was set up by a Brexit supporter before the referendum was held, had called for the Government to annul the results if the Remain or Leave vote won by less than 60 per cent on a turnout of less than 75 per cent. Government petitions which reach over 100,000 signatures must be considered for debate in parliament.",
+            "image_url": "http://67.media.tumblr.com/13864b31795b1a52a50a04866de39c4e/tumblr_o9u9s5qM8g1r539hzo1_500.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Apple Patents Augmented Reality Display, May Be Building A VR Headset ",
+            "description": "Apple has just been granted another AR/VR related technology patent, to add to their growing list. In this case it's a transparent, high field of view display which looks to be aimed at the augmented reality sector and, alongside other mounting evidence, could indicate Apple is preparing to enter the immersive technology race sooner rather than later... Anticipation that the company is working on 'something' AR/VR behind the scenes at Cupertino has been stoked by a series of company acquisition and staff hires. Most interestingly however are the trail of patent applications made by Apple.",
+            "image_url": "http://66.media.tumblr.com/56a7e7ecf964a7b6c148ac0e46f8c56f/tumblr_o9rdpwT7aw1r539hzo1_500.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Do You Own Your Own Fingerprints?",
+            "description": "These days, many of us regularly feed pieces of ourselves into machines for convenience and security. Our fingerprints unlock our smartphones, and companies are experimenting with more novel biometric markers -- voice, heartbeat, grip -- as ID for banking and other transactions. But there are almost no laws in place to control how companies use such information. Nor is it clear what rights people have to protect scans of their retinas or the contours of their face from cataloging by the private sector.",
+            "image_url": "http://65.media.tumblr.com/8ea2de397f19b9520d98da4bb1494aa9/tumblr_o9mxwgNjHo1r539hzo1_500.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Ashley Madison Admits It Lured Customers With 70,000 Fake 'Fembots'",
+            "description": "Ashley Madison's new executive team \"admits that it used fembots to lure men into paying to join the site,\" reports Arts Technica. More than 75% of the site's customers were convinced to join by an army of 70,000 fembot accounts, \"created in dozens of languages by data entry workers...told to populate these accounts with fake information and real photos posted by women who had shut down their accounts on Ashley Madison or other properties owned by Ashley Madison's parent company, Avid Life Media... In reality, that lady was a few lines of PHP... In internal company e-mails, executives discussed openly that only about five percent of the site's members were real females.\"",
+            "image_url": "http://66.media.tumblr.com/b85637e9aa950379769a98f27ba09a6b/tumblr_o9j2iqtf0C1r539hzo1_500.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Researchers Find Over 6,000 Compromised Redis Installations",
+            "description": "Security researchers have discovered over 6,000 compromised installations of Redis, the open source in-memory data structure server, among the tens of thousands of Redis servers indexed by Shodan. \"By default, Redis has no authentication or security mechanism enabled, and any security mechanisms must be implemented by the end user.\"",
+            "image_url": "http://media.fukung.net/imgs/7bf8f7a6ce8778a52e4e2de66bfb4700.jpg"
+        }
+    ]
+}
