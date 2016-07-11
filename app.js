@@ -1,17 +1,23 @@
 var Article = function(props) {
   return (
     <div
-      className="article"
+      className="media article"
       style={{clear: 'both'}}
     >
-      <img
-        src={props.image_url}
+      <a
+        className="img"
         onClick={props.handleClick}
-        style={{width: '450px', float: 'left'}}
-      />
-      <h2>
-        {props.title}
-      </h2>
+      >
+        <img src={props.image_url} style={{width: '200px'}}/>
+      </a>
+      <div className="bd">
+        <h2>
+          {props.title}
+        </h2>
+        <p>
+          {props.description}
+        </p>
+      </div>
     </div>
   )
 }
@@ -19,6 +25,9 @@ var Article = function(props) {
 var ArticleList = function(props) {
   return (
     <div className="article-list">
+      <div>
+        Total: {props.total}
+      </div>
       <div>
       {
         props.articles.map(function(article) {
@@ -31,9 +40,6 @@ var ArticleList = function(props) {
           )
         }, this)
       }
-      </div>
-      <div>
-        Total: {props.total}
       </div>
     </div>
   )
