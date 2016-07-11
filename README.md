@@ -1,2 +1,2 @@
 # slashr
-A random pics viewer written with ReactJS
+This is a playground for learning React JS
