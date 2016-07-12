@@ -1,0 +1,38 @@
+{
+    "page": 3,
+    "per_page": 5,
+    "has_more": true,
+    "total": 17,
+    "data": [
+        {
+            "id": 11,
+            "title": "Study Shows Thumb-Sucking and Nail-Biting Can Be Good For Kids",
+            "description": "Perri Klass M.D. writes in the NYT that according to a new study of children aged 5 to 11, thumb-suckers and nail-biters were less likely to have positive allergic skin tests later in life. In the study, parents were asked about their children's nail-biting and thumb-sucking habits when the children were 5, 7, 9 and 11 years old. skin testing for allergic sensitization to a range of common allergens including dust mites, grass, cats, dogs, horses and common molds was done when the children were 13 years old, and then later when they were 32. The study found that children who frequently sucked a thumb or bit their nails were significantly less likely to have positive allergic skin tests both at 13 and again at 32. Children with both habits were even less likely to have a positive skin test than those with only one of the habits. The question of such a connection arose because of the so-called hygiene hypothesis, an idea originally formulated in 1989, that there may be a link between atopic disease -- the revved-up action of the immune system responsible for eczema, asthma and allergy -- and a lack of exposure to various microbes early in life. Some exposure to germs, the argument goes, may help program a child's immune system to fight disease, rather than develop allergies. \"The hygiene hypothesis is interesting because it suggests that lifestyle factors may be responsible for the rise in allergic diseases in recent decades,\" says Robert J. Hancox. \"Obviously hygiene has very many benefits, but perhaps this is a downside. The hygiene hypothesis is still unproven and controversial, but this is another piece of evidence that it could be true.\" Although the results do not suggest that kids should take up these habits, the findings do suggest the habits help protect against allergies that persist into adulthood.",
+            "image_url": "http://media.fukung.net/imgs/f58858e3fe69c3ce1f42341cab65fb13.jpg"
+        },
+        {
+            "id": 12,
+            "title": "New Dwarf Planet Discovered In Outer Solar System",
+            "description": "Astronomers have found another Pluto-like dwarf planet located about 20 times farther away from the sun than Neptune. The small planet, dubbed 2015 RR245, is estimated to be about 435 miles in diameter and flying in an elliptical, 700-year orbit around the sun. At closest approach, RR245 will be about 3.1 billion miles from the sun, a milestone it is expected to next reach in 2096. At its most distant point, the icy world is located about 7.5 billion miles away. It was found by a joint team of astronomers using the Canada-France-Hawaii Telescope (CFHT) on Maunakea, Hawaii, in images taken in September 2015 and analyzed in February. The discovery was announced on Monday in the Minor Planet Electronic Circular.",
+            "image_url": "http://media.fukung.net/imgs/c9dca5521a28e7b4073312635d774c93.jpg"
+        },
+        {
+            "id": 13,
+            "title": "Google To Train 2 Million Indian Android Developers",
+            "description": "Google has announced its new \"Android Fundamentals\" training program, which aims to train and certify up to two million Android developers in India. The course, soon to be available online and at schools country-wide, is focused on training, testing, and certifying Android developers to prepare students for careers using Android technology. Google is currently working to update the skills of its existing trainers to prepare them to teach the Fundamentals course, as well as updating course materials to provide students a solid foundation in Android development. The new program works with Prime Minister Narendra Modi's 'Skill India' initiative, launched in 2015 with the intent of training 400 million Indian citizens with new vocational skills by 2022.",
+            "image_url": "http://media.fukung.net/imgs/1702a740a3cc31ff4bcb5063d7fc7069.jpg"
+        },
+        {
+            "id": 14,
+            "title": "Seagate Fires 6,500, Or 14% of Workforce, Stock Soars",
+            "description": "[Seagate] announced today an additional restructuring plan for continued consolidation of its global footprint across Asia, EMEA and the Americas. The plan includes reducing the Company's global headcount by approximately 6,500 employees, or 14% of its global headcount by the end of fiscal year 2017. The total pretax charges for the plan will be approximately $164 million in fiscal year 2017. The restructuring activities and global footprint consolidation underway should enable the Company to be operating within its targeted Non-GAAP product gross margin range of 27-32% by the December 2016 quarter.",
+            "image_url": "http://media.fukung.net/imgs/a0e8dfa2791231793d17f3ea3731cd1c.jpg"
+        },
+        {
+            "id": 15,
+            "title": "Third Tesla Crashes Amid Report of SEC Investigation",
+            "description": "Tesla hasn't had the best month so far as not one, not two, but a total of three crashes have been reported with the car's Autopilot self-driving system engaged at the time -- two of which resulted in fatalities. In addition, The Wall Street Journal is reporting today that the Securities and Exchange Commission is investigating whether Tesla violated securities law by failing to disclose more quickly a fatal accident in Florida in May involving a Tesla Model S that was in self-driving mode. The SEC didn't comment on the report, and Tesla issued a statement saying it has \"not received any communication from the SEC regarding this issue.\" As for the Autopilot crash that was reported today, the driver said he activated Autopilot mode at the beginning of his trip. Tesla is looking into the crash and has yet to confirm whether or not Autopilot was a factor. Tesla CEO Elon Musk teased a \"Top Secret Tesla Masterplan, Part 2\" via Twitter that he is \"Hoping to publish later this week.\"",
+            "image_url": "http://media.fukung.net/imgs/Fluffy.jpg"
+        }
+    ]
+}
