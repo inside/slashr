@@ -1,0 +1,19 @@
+{
+  "name": "slashr",
+  "version": "1.0.0",
+  "description": "This is a playground for learning React JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inside/slashr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inside/slashr/issues"
+  },
+  "homepage": "https://github.com/inside/slashr#readme"
+}
