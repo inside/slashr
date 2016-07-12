@@ -26,7 +26,16 @@ var ArticleList = function(props) {
   return (
     <div className="article-list">
       <div>
-        Total: {props.total}
+        <span>
+          Total: {props.total}.{' '}
+        </span>
+        <span>
+          Pages:{' '}
+            <a onClick={props.onPageClick.bind(null, 1)}>one</a>,{' '}
+            <a onClick={props.onPageClick.bind(null, 2)}>two</a>,{' '}
+            <a onClick={props.onPageClick.bind(null, 3)}>three</a>,{' '}
+            <a onClick={props.onPageClick.bind(null, 4)}>four</a>
+        </span>
       </div>
       <div>
       {
@@ -50,6 +59,19 @@ var Slashr = React.createClass({
     return Math.floor(Math.random() * (max - min + 1)) + min
   },
 
+  fetchPage: function(page) {
+    var that = this
+
+    fetch('/slashr/page' + page + '.json').then(function(response) {
+      response.json().then(function(json) {
+        that.setState({
+          articles: json.data,
+          total: json.total
+        })
+      })
+    })
+  },
+
   handleClick: function() {
     console.log('handleClick called')
     //var index = this.getRandomIntInclusive(0, this.articles.length - 1)
@@ -59,6 +81,10 @@ var Slashr = React.createClass({
     //})
   },
 
+  handlePageClick: function(page) {
+    this.fetchPage(page)
+  },
+
   getInitialState: function() {
     return {
       articles: []
@@ -66,16 +92,7 @@ var Slashr = React.createClass({
   },
 
   componentDidMount: function() {
-    var that = this
-
-    fetch('/slashr/page1.json').then(function(response) {
-        response.json().then(function(json) {
-          that.setState({
-            articles: json.data,
-            total: json.total
-          })
-        })
-      })
+    this.fetchPage(1)
   },
 
   render: function() {
@@ -87,6 +104,7 @@ var Slashr = React.createClass({
         <ArticleList
           articles={this.state.articles}
           total={this.state.total}
+          onPageClick={this.handlePageClick}
         />
       </div>
     )
