@@ -25,19 +25,6 @@ var Article = function(props) {
 var ArticleList = function(props) {
   return (
     <div className="article-list">
-      <div>
-        <span>
-          Total: {props.total}.{' '}
-        </span>
-        <span>
-          Pages:{' '}
-            <a onClick={props.onPageClick.bind(null, 1)}>one</a>,{' '}
-            <a onClick={props.onPageClick.bind(null, 2)}>two</a>,{' '}
-            <a onClick={props.onPageClick.bind(null, 3)}>three</a>,{' '}
-            <a onClick={props.onPageClick.bind(null, 4)}>four</a>
-        </span>
-      </div>
-      <div>
       {
         props.articles.map(function(article) {
           return (
@@ -47,9 +34,54 @@ var ArticleList = function(props) {
               onClick={props.handleClick}
             />
           )
-        }, this)
+        })
       }
-      </div>
+    </div>
+  )
+}
+
+var Pagination = function(props) {
+  var renderPagesLinks = function(pages) {
+    if (!props.pages) {
+      return []
+    }
+
+    var links = []
+
+    for (var i = 1; i <= props.pages; i++) {
+      var style = {
+        display: 'inline-block',
+        padding: '3px 5px',
+        border: '1px solid black'
+      }
+
+      if (props.page === i) {
+        style = Object.assign({}, style, {textDecoration: 'underline'})
+      }
+
+      links.push(
+        <a
+          onClick={props.onPageClick.bind(null, i)}
+          style={style}
+          key={i}
+        >
+          {i}
+        </a>
+      )
+    }
+
+    return links
+  }
+
+  return (
+    <div>
+      <span>
+        Total: {props.total}.{' '}
+      </span>
+      <span>
+        Pages:{' '}
+        {renderPagesLinks(props.pages)}
+      </span>
     </div>
   )
 }
@@ -66,7 +98,9 @@ var Slashr = React.createClass({
       response.json().then(function(json) {
         that.setState({
           articles: json.data,
-          total: json.total
+          total: json.total,
+          page: page,
+          pages: Math.ceil(json.total / 5)
         })
       })
     })
@@ -87,7 +121,10 @@ var Slashr = React.createClass({
 
   getInitialState: function() {
     return {
-      articles: []
+      articles: [],
+      total: null,
+      page: null,
+      pages: null
     }
   },
 
@@ -101,10 +138,14 @@ var Slashr = React.createClass({
         <h1>
           Hello, this is Slashr!
         </h1>
+        <Pagination
+          total={this.state.total}
+          page={this.state.page}
+          pages={this.state.pages}
+          onPageClick={this.handlePageClick}
+        />
         <ArticleList
           articles={this.state.articles}
-          total={this.state.total}
-          onPageClick={this.handlePageClick}
         />
       </div>
     )
