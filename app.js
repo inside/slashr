@@ -152,4 +152,4 @@ var Slashr = React.createClass({
   }
 })
 
-ReactDOM.render(<Slashr/>, document.getElementById('root'))
+ReactDOM.render(<Slashr />, document.getElementById('root'))
