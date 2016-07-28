@@ -4,13 +4,13 @@ var Article = function(props) {
       className="media article"
       style={{clear: 'both'}}
     >
-      <a
-        className="img"
-        onClick={props.handleClick}
-      >
-        <img src={props.image_url} style={{width: '200px'}}/>
-      </a>
       <div className="bd">
+        <img
+          className="img"
+          src={props.image_url}
+          style={{width: '200px'}}
+          onClick={props.onImageClick}
+        />
         <h2>
           {props.title}
         </h2>
@@ -31,7 +31,7 @@ var ArticleList = function(props) {
             <Article
               {...article}
               key={article.id}
-              onClick={props.handleClick}
+              onImageClick={props.onImageClick}
             />
           )
         })
@@ -111,13 +111,12 @@ var Slashr = React.createClass({
     })
   },
 
-  handleClick: function() {
-    console.log('handleClick called')
-    //var index = this.getRandomIntInclusive(0, this.articles.length - 1)
-
-    //this.setState({
-      //image: this.articles[index]
-    //})
+  handleImageClick: function(e) {
+    if (e.target.style.width === '') {
+        e.target.style.width = '200px'
+    } else {
+        e.target.style.width = ''
+    }
   },
 
   handlePageClick: function(page) {
