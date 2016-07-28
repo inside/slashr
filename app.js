@@ -86,11 +86,16 @@ var Pagination = function(props) {
   )
 }
 
-var Slashr = React.createClass({
-  getRandomIntInclusive: function(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min
-  },
+var Sorts = function(props) {
+  return (
+    <div>
+      <span>Sort:</span>{' '}
+      <a onClick={props.onSortClick}>alpha</a>
+    </div>
+  )
+}
 
+var Slashr = React.createClass({
   fetchPage: function(page) {
     var that = this
 
@@ -119,12 +124,31 @@ var Slashr = React.createClass({
     this.fetchPage(page)
   },
 
+  handleSortClick: function() {
+    var articles = Array.from(this.state.articles)
+
+    this.setState({
+      sort: this.state.sort === 'alphaaz' ? 'alphaza' : 'alphaaz'
+    })
+
+    var order = this.state.sort === 'alphaaz' ? 1 : -1
+
+    articles.sort(function(a, b) {
+      return a.title.localeCompare(b.title) * order
+    })
+
+    this.setState({
+      articles: articles
+    })
+  },
+
   getInitialState: function() {
     return {
       articles: [],
       total: null,
       page: null,
-      pages: null
+      pages: null,
+      sort: 'alphaaz'
     }
   },
 
@@ -144,8 +168,12 @@ var Slashr = React.createClass({
           pages={this.state.pages}
           onPageClick={this.handlePageClick}
         />
+        <Sorts
+          onSortClick={this.handleSortClick}
+        />
         <ArticleList
           articles={this.state.articles}
+          onImageClick={this.handleImageClick}
         />
       </div>
     )
