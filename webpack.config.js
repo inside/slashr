@@ -3,16 +3,18 @@ module.exports = {
   output: {
     filename: 'bundle.js'
   },
-  devtool: 'source-map',
+  //devtool: 'source-map',
+  devtool: 'eval',
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react']
-        }
       },
     ]
+  },
+  resolve: {
+    // you can now require('file') instead of require('file.coffee')
+    extensions: ['', '.js', '.jsx']
   }
 };

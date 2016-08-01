@@ -1,9 +1,9 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
 
-var ArticleList = require('./components/article-list')
-var Pagination = require('./components/pagination')
-var Sorts = require('./components/sorts')
+var ArticleList = require('./components/article-list').default
+var Pagination = require('./components/pagination').default
+var Sorts = require('./components/sorts').default
 
 var Slashr = React.createClass({
   fetchPage: function(page) {
@@ -30,7 +30,11 @@ var Slashr = React.createClass({
   },
 
   handlePageClick: function(page) {
-    this.fetchPage(page)
+    var that = this
+
+    return function(event) {
+      that.fetchPage(page)
+    }
   },
 
   handleSortClick: function() {
