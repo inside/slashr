@@ -1,8 +1,11 @@
 import React from 'react'
 
-export default ({onSortClick}) => (
+export default ({
+  label,
+  onSortClick,
+}) => (
   <div>
     <span>Sort:</span>{' '}
-    <a onClick={onSortClick}>alpha</a>
+    <a onClick={onSortClick}>{label}</a>
   </div>
 )
