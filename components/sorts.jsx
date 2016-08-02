@@ -2,7 +2,7 @@ import React from 'react'
 
 export default ({onSortClick}) => (
   <div>
-    <span>totoSort:</span>{' '}
+    <span>Sort:</span>{' '}
     <a onClick={onSortClick}>alpha</a>
   </div>
 )
