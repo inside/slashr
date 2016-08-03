@@ -1,21 +1,21 @@
 import React from 'react'
+import NavLink from './nav-link'
 
-const renderPagesLinks = (page, pages, onPageClick) => {
+const renderPagesLinks = (page, pages) => {
   // Creates a sequence from 1 to pages
   let links = Array.from({length: pages}, (v, k) => k + 1)
 
   return links.map(i => (
-    <a
-      onClick={onPageClick(i)}
+    <NavLink
+      to={`/page/${i}`}
       key={i}
-      className={page === i ? 'active' : null}
     >
       {i}
-    </a>
+    </NavLink>
   ))
 }
 
-export default ({page, pages, total, onPageClick}) => {
+export default ({page, pages, total}) => {
   return (
     <div className="pagination">
       <span>
@@ -23,7 +23,7 @@ export default ({page, pages, total, onPageClick}) => {
       </span>
       <span>
         Pages:{' '}
-        {pages > 0 && renderPagesLinks(page, pages, onPageClick)}
+        {pages > 0 && renderPagesLinks(page, pages)}
       </span>
     </div>
   )

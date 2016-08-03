@@ -2,7 +2,7 @@
   "name": "slashr",
   "version": "1.0.0",
   "description": "This is a playground for learning React JS",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "webpack --progress --colors --watch",
     "test": "echo \"Everything passes!!\" && exit 0"
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "react": "15.2.1",
-    "react-dom": "15.2.1"
+    "react-dom": "15.2.1",
+    "react-router": "2.6.1"
   }
 }

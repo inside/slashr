@@ -5,7 +5,7 @@ import ArticleList from './components/article-list'
 import Pagination from './components/pagination'
 import Sorts from './components/sorts'
 
-class Slashr extends Component {
+export default class Slashr extends Component {
   constructor(props) {
     super(props)
 
@@ -15,10 +15,6 @@ class Slashr extends Component {
       page: null,
       pages: null,
       sort: 'alphaaz',
-    }
-
-    this.handlePageClick = page => e => {
-      this.fetchPage(page)
     }
 
     this.handleSortClick = () => {
@@ -60,7 +56,13 @@ class Slashr extends Component {
   }
 
   componentDidMount() {
-    this.fetchPage(1)
+    this.fetchPage(this.props.params.page)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.params.page !== nextProps.params.page) {
+      this.fetchPage(nextProps.params.page)
+    }
   }
 
   render() {
@@ -73,7 +75,6 @@ class Slashr extends Component {
           total={this.state.total}
           page={this.state.page}
           pages={this.state.pages}
-          onPageClick={this.handlePageClick}
         />
         <Sorts
           label={this.state.sort}
@@ -87,5 +88,3 @@ class Slashr extends Component {
     )
   }
 }
-
-ReactDOM.render(<Slashr />, document.getElementById('root'))
