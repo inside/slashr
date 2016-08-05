@@ -7,13 +7,13 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         loader: 'babel-loader',
       },
     ]
   },
   resolve: {
     // you can now require('file') instead of require('file.coffee')
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js']
   }
 };
