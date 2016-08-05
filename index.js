@@ -1,16 +1,13 @@
 import React from 'react'
 import {render} from 'react-dom'
 import {Router, Route, hashHistory, IndexRedirect} from 'react-router'
-import {createStore, combineReducers} from 'redux'
+import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 
-import {zoomReducer} from './reducers'
+import combinedReducers from './reducers'
 import App from './app'
 
-let reducers = combineReducers({
-  zoomState: zoomReducer,
-})
-let store = createStore(reducers,
+let store = createStore(combinedReducers,
   window.devToolsExtension && window.devToolsExtension())
 
 render(

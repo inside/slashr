@@ -1,3 +1,5 @@
+import {combineReducers} from 'redux'
+
 const zoomReducer = (state = {zooms: {}}, action) => {
   switch (action.type) {
     case 'ZOOM_TOGGLE':
@@ -10,4 +12,8 @@ const zoomReducer = (state = {zooms: {}}, action) => {
   }
 }
 
-export {zoomReducer}
+const combinedReducers = combineReducers({
+  zoomState: zoomReducer,
+})
+
+export default combinedReducers

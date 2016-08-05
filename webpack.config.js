@@ -9,6 +9,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        include: __dirname // Allows implicit import index.js in a directory
       },
     ]
   },
