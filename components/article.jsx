@@ -1,10 +1,13 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-export default ({
+const Article = ({
+  id,
   image_url,
   title,
   description,
   onImageClick,
+  zooms,
 }) => (
   <div
     className="media article"
@@ -14,7 +17,7 @@ export default ({
       <img
         className="img"
         src={image_url}
-        style={{width: '200px'}}
+        style={zooms[id] ? {} : {width: '200px'}}
         onClick={onImageClick}
       />
       <h2>
@@ -26,3 +29,22 @@ export default ({
     </div>
   </div>
 )
+
+const mapStateToProps = (state) => {
+  return {
+    zooms: state.zoomState.zooms
+  }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    onImageClick: () => {
+      dispatch({
+        type: 'ZOOM_TOGGLE',
+        id: ownProps.id,
+      })
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Article)

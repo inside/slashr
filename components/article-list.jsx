@@ -4,7 +4,6 @@ import Article from './article'
 
 export default ({
   articles,
-  onImageClick
 }) => (
   <div className="article-list">
     {
@@ -12,7 +11,6 @@ export default ({
         <Article
           {...article}
           key={article.id}
-          onImageClick={onImageClick}
         />
       ))
     }

@@ -5,7 +5,7 @@ import ArticleList from './components/article-list'
 import Pagination from './components/pagination'
 import Sorts from './components/sorts'
 
-export default class Slashr extends Component {
+class Slashr extends Component {
   constructor(props) {
     super(props)
 
@@ -47,14 +47,6 @@ export default class Slashr extends Component {
     })
   }
 
-  handleImageClick(e) {
-    if (e.target.style.width === '') {
-        e.target.style.width = '200px'
-    } else {
-        e.target.style.width = ''
-    }
-  }
-
   componentDidMount() {
     this.fetchPage(this.props.params.page)
   }
@@ -82,9 +74,10 @@ export default class Slashr extends Component {
         />
         <ArticleList
           articles={this.state.articles}
-          onImageClick={this.handleImageClick}
         />
       </div>
     )
   }
 }
+
+export default Slashr
